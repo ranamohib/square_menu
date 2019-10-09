@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>square chuss</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        height: 100vh;
+        width: 100vw;
+        background: gray;
+        position: relative;
+        overflow: hidden;
+    }
+    .upper,.lower{
+        width: 110vw;
+        height: 110vw;
+        background: pink;
+        position: absolute;
+        transition: transform 1s;
+
+    }
+
+    .upper{
+        left: 50%;
+        bottom: 50%;
+        transform-origin: 0 100%;
+        transform: rotate(-45deg);
+        
+
+    }
+    .upper:hover{
+        transform: translateY(-20px) rotate(-45deg);
+    }
+    .lower{
+        
+        left: 50%;
+        top: 50%;
+        transform-origin: 0 0;
+        transform: rotate(45deg);
+    }
+    .lower:hover{
+        transform: translateY(20px) rotate(45deg);
+    }
+    .left,.right{
+        position: absolute;
+        width: 50vw;
+        height: 100vh;
+        background: white;
+        transition: transform 1s;
+    }
+    .right{
+        right: 0;
+    }
+    .right:hover{
+        transform: translateX(40px);
+    }
+    .left:hover{
+        transform: translateX(-40px);
+    }
+    </style>
+</head>
+<body>
+        
+    <div class="container">
+        <a href="#" target="_blank"><div class="left"></div></a>
+        <a href="#" target="_blank"><div class="right"></div></a>
+        <a href="#" target="_blank"><div class="upper"></div></a>
+        <a href="#" target="_blank"><div class="lower"></div></a>
+    </div>
+</body>
+</html>
